@@ -1,6 +1,3 @@
-Mana barcha kodlar bitta fayl qilib birlashtirilgan variant. Buni shundoqligicha `.html` formatida saqlab, brauzerda ochishingiz mumkin:
-
-```html
 <!DOCTYPE html>
 <html lang="uz">
 <head>
@@ -212,7 +209,7 @@ Mana barcha kodlar bitta fayl qilib birlashtirilgan variant. Buni shundoqligicha
 
         .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
@@ -330,19 +327,76 @@ Mana barcha kodlar bitta fayl qilib birlashtirilgan variant. Buni shundoqligicha
             font-size: 15px;
         }
 
-        @media(max-width:768px){
-            .hero h1 {
-                font-size: 40px;
-            }
-            .hero h2 {
-                font-size: 22px;
+        /* --------------------------------------------------------------------------------
+           TELEFON VA PLANSHETLAR UCHUN MOSLASHUVCHAN (RESPONSIVE) STULLAR
+        -------------------------------------------------------------------------------- */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 48px; }
+            .projects { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px 0;
             }
             nav ul {
                 gap: 15px;
                 font-size: 14px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero {
+                padding-top: 120px;
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+            .hero h2 {
+                font-size: 20px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .section-title {
+                font-size: 32px;
+            }
+            .about {
+                padding: 25px;
+            }
+            .about p {
+                text-align: left;
+                font-size: 15px;
             }
             section {
                 padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 24px;
+            }
+            nav ul {
+                gap: 10px;
+            }
+            nav ul li a {
+                font-size: 13px;
+            }
+            .hero h1 {
+                font-size: 30px;
+            }
+            .btn {
+                width: 100%;
+                text-align: center;
+                padding: 12px 20px;
+            }
+            .contact {
+                padding: 20px;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -380,7 +434,7 @@ Mana barcha kodlar bitta fayl qilib birlashtirilgan variant. Buni shundoqligicha
         <p class="section-subtitle">Dasturlash falsafam, tajribam va raqamli dunyoga qarashlarim</p>
         <div class="about">
             <p>
-                Men <strong>Muhammadumar Qobiljonov</strong>. Bugungi jadal rivojlanayotgan raqamli texnologiyalar asrida shunchaki kod yozuvchi emas, balki muammolarga optimal va chiroyli veb-yechimlar topuvchi <strong>Front-End dasturchiman</strong>. Dasturlash asoslarini va ilg'or metodologiyalarni sohadagi eng nufuzli maskanlardan biri — <strong>Cohub Akademiyasi</strong>da mukammal o'zlashtirdim. Hozirda 1 yildan ortiq vaqt davomida real loyihalar ustida ishlab, amaliy tajribamni muntazam oshirib kelmoqdaman.
+                Men <strong>Muhammadumar Qobiljonov</strong>. Bugungi jadal rivojlanayotgan raqamli texnologiyalar asrida shunchaki kod yozuvchi emas, baki muammolarga optimal va chiroyli veb-yechimlar topuvchi <strong>Front-End dasturchiman</strong>. Dasturlash asoslarini va ilg'or metodologiyalarni sohadagi eng nufuzli maskanlardan biri — <strong>Cohub Akademiyasi</strong>da mukammal o'zlashtirdim. Hozirda 1 yildan ortiq vaqt davomida real loyihalar ustida ishlab, amaliy tajribamni muntazam oshirib kelmoqdaman.
             </p>
             <p>
                 Mening dasturlashdagi asosiy maqsadim — foydalanuvchiga vizual tomondan estetik zavq beradigan, shu bilan birga texnik jihatdan mukammal va chaqmoqdek tez ishlaydigan veb-saytlar va Single Page Application (SPA) ilovalar yaratishdir. Har bir loyihaga individual yondashgan holda, kod arxitekturasining tozaligiga (Clean Code), qidiruv tizimlariga mosligiga (SEO) va foydalanuvchi interfeysining soddaligiga (UI/UX) jiddiy e'tibor qarataman.
@@ -513,7 +567,7 @@ Mana barcha kodlar bitta fayl qilib birlashtirilgan variant. Buni shundoqligicha
                     <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1200" alt="Netlib UZ">
                     <div class="project-content">
                         <h3>Netlib UZ</h3>
-                        <p>Elektron resurslar, kitoblar va foydali qo'llanmalanny jamlagan, ma'lumotlarni tezkor qidirish va saralash tizimiga ega onlayn kutubxona platformasi.</p>
+                        <p>Elektron resurslar, kitoblar va foydali qo'llanmalarni jamlagan, ma'lumotlarni tezkor qidirish va saralash tizimiga ega onlayn kutubxona platformasi.</p>
                         <div class="project-tags">
                             <span class="tag">React.js</span>
                             <span class="tag">Tailwind CSS</span>
